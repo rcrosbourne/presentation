@@ -6,7 +6,7 @@ My name is Rainaldo, and I've been a software engineer for over 20 years.
 
 I find coding to be challenging, fun, and fulfilling. I get to solve interesting problems and build cool things that people use every day!
 
-![Rainaldo Profile](/images/profile-photo.jpg)
+![Rainaldo Profile](/images/profile-photo.png)
 
 ---
 
