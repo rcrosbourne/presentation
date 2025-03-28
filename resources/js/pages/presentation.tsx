@@ -29,7 +29,11 @@ export default function Presentation() {
 
   return (
     <>
-      <Head title="Angels Presentation" />
+      <Head title="Software Engineering for Kids">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet" />
+      </Head>
       
       {isLoading ? (
         <div className="flex items-center justify-center min-h-screen">

@@ -241,7 +241,7 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
   }
   
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-100 to-purple-100 p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-100 to-purple-100 p-8 font-sans">
       <div className="relative w-full max-w-4xl bg-white rounded-xl shadow-2xl p-12 min-h-[60vh] flex flex-col justify-center">
         <div className="text-center">
           {processSlideContent(slides[currentSlide], currentSlide)}
