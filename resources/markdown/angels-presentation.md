@@ -2,7 +2,7 @@
 
 A fun introduction to coding and creating with computers!
 
-![Title Image](/images/title-image.jpg)
+![Title Image](/images/title-image.png)
 
 ---
 
@@ -24,7 +24,7 @@ Software engineers build the apps, games, and websites you use every day!
 
 We write special instructions called "code" that tell computers what to do.
 
-![Coding Kid](/images/coding-kid.jpg)
+![Coding Kid](/images/coding-kids.png)
 
 ---
 
@@ -37,7 +37,7 @@ Many of your favorite games and apps were built by software engineers:
 - **TikTok**: Made by coders who build fun social apps
 - **YouTube**: Designed by engineers to share videos
 
-![Roblox](/images/roblox-game.jpg)
+![Roblox](/images/roblox-game.png)
 
 ---
 
@@ -49,13 +49,11 @@ Roblox is made with millions of lines of code!
 - Engineers built tools to let kids make their own worlds
 - Software handles millions of players at the same time
 
-![Roblox Studio](/images/roblox-studio.jpg)
+![Roblox Studio](/images/roblox-studio.png)
 
 ---
 
 ## Quiz Time!
-
-**What do software engineers write to make computers work?**
 
 <!-- QUIZ:{"question":"What do software engineers write to make computers work?","options":["A) Stories","B) Code","C) Music","D) Drawings"]} -->
 
@@ -64,8 +62,6 @@ Roblox is made with millions of lines of code!
 ---
 
 ## Answer
-
-**What do software engineers write to make computers work?**
 
 <!-- QUIZ:{"question":"What do software engineers write to make computers work?","options":["A) Stories","B) Code","C) Music","D) Drawings"],"correctAnswer":1,"showAnswer":true} -->
 
@@ -84,7 +80,7 @@ Games like Minecraft follow these steps:
 3. Programmers write the code
 4. Testers find and fix problems
 
-![Game Development](/images/game-development.jpg)
+![Game Development](/images/game-development.png)
 
 ---
 
@@ -96,13 +92,11 @@ You can start learning to code right now:
 - **Roblox Studio**: Make your own Roblox games
 - **Minecraft Education**: Learn coding in Minecraft
 
-![Scratch](/images/scratch.jpg)
+![Scratch](/images/start-today.png)
 
 ---
 
 ## Quiz Time!
-
-**Which of these apps was NOT made by software engineers?**
 
 <!-- QUIZ:{"question":"Which of these apps was NOT made by software engineers?","options":["A) TikTok","B) Trees","C) Minecraft","D) YouTube"]} -->
 
@@ -112,7 +106,6 @@ You can start learning to code right now:
 
 ## Answer
 
-**Which of these apps was NOT made by software engineers?**
 
 <!-- QUIZ:{"question":"Which of these apps was NOT made by software engineers?","options":["A) TikTok","B) Trees","C) Minecraft","D) YouTube"],"correctAnswer":1,"showAnswer":true} -->
 
@@ -130,7 +123,7 @@ Trees are made by nature, but all apps and games are made by software engineers!
 - Fix bugs (mistakes in code)
 - Learn new things
 
-![Team Coding](/images/team-coding.jpg)
+![Team Coding](/images/engineer.png)
 
 ---
 
@@ -143,7 +136,7 @@ Software is everywhere!
 - **Websites**: Google, Wikipedia
 - **Tools**: Calculators, Photo editors
 
-![Different Apps](/images/apps-collage.jpg)
+![Different Apps](/images/apps-collage.png)
 
 ---
 
@@ -156,7 +149,7 @@ Coding is like having super powers:
 - You solve puzzles every day
 - You're always learning something new
 
-![Happy Coders](/images/happy-coding.jpg)
+![Happy Coders](/images/coding-fun.png)
 
 ---
 
@@ -171,7 +164,7 @@ Coding is like having super powers:
 
 Your imagination is the only limit!
 
-![Kids Building](/images/kids-creating.jpg)
+![Kids Building](/images/building.png)
 
 ---
 
@@ -181,4 +174,4 @@ Do you have any questions about software engineering?
 
 Remember: You can start learning to code today, and maybe someday YOU will create the next big app or game!
 
-![Thank You](/images/thank-you.jpg)
+![Thank You](/images/thank-you.png)

@@ -247,11 +247,13 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
           {processSlideContent(slides[currentSlide], currentSlide)}
         </div>
         
-        <div className="absolute bottom-6 right-6 flex gap-4">
-          <span className="text-gray-500 text-sm">
-            {currentSlide + 1} / {slides.length}
-          </span>
-        </div>
+        {currentSlide !== 0 && (
+          <div className="absolute bottom-6 right-6 flex gap-4">
+            <span className="text-gray-500 text-sm">
+              {currentSlide + 1} / {slides.length}
+            </span>
+          </div>
+        )}
       </div>
       
       <div className="mt-8 flex gap-4">
