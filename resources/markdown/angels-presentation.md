@@ -1,4 +1,12 @@
-# Software Engineering for Kids
+# Software Engineering
+
+A fun introduction to coding and creating with computers!
+
+![Title Image](/images/title-image.jpg)
+
+---
+
+# Software Engineering
 
 ## About Me
 

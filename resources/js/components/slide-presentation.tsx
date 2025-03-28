@@ -11,7 +11,40 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Function to process slide content and handle quiz components
-  const processSlideContent = (content: string) => {
+  const processSlideContent = (content: string, slideIndex: number) => {
+    // Special handling for the title slide (first slide)
+    if (slideIndex === 0) {
+      return (
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-yellow-400" />
+          <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-blue-400" />
+          <div className="absolute -bottom-6 -left-6 h-16 w-16 rounded-full bg-green-400" />
+          <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-purple-400" />
+          
+          <ReactMarkdown 
+            components={{
+              p: ({node, ...props}) => <p className="text-xl mb-6 text-gray-600 max-w-md text-center" {...props} />,
+              h1: ({node, ...props}) => <h1 className="text-5xl font-bold mb-8 text-blue-600 text-center" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-3xl font-bold mb-6 text-purple-600 text-center" {...props} />,
+              strong: ({node, ...props}) => <strong className="font-bold text-blue-700" {...props} />,
+              img: ({node, alt, src, ...props}) => (
+                <div className="mt-4 mb-8">
+                  <img 
+                    src={src} 
+                    alt={alt || 'Profile image'} 
+                    className="w-48 h-48 object-cover rounded-full border-4 border-blue-300 shadow-lg" 
+                    {...props} 
+                  />
+                </div>
+              )
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        </div>
+      );
+    }
+    
     // Check if the slide contains a quiz component
     const quizMatch = content.match(/<!--\s*QUIZ:(.*?)\s*-->/);
     
@@ -89,11 +122,11 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
           <div className="flex flex-col">
             {/* Title at the top, full width */}
             {title && (
-              <div className="w-full mb-6 text-center">
+              <div className="w-full mb-6">
                 <ReactMarkdown 
                   components={{
-                    h1: ({node, ...props}) => <h1 className="text-4xl font-bold mb-6 text-blue-600" {...props} />,
-                    h2: ({node, ...props}) => <h2 className="text-3xl font-bold mb-4 text-purple-600" {...props} />
+                    h1: ({node, ...props}) => <h1 className="text-4xl font-bold mb-6 text-blue-600 text-center" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="text-3xl font-bold mb-4 text-purple-600 text-center" {...props} />
                   }}
                 >
                   {title}
@@ -110,15 +143,15 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
                   className="max-h-[40vh] rounded-lg shadow-md border-4 border-blue-200 object-contain" 
                 />
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 text-left">
                 <ReactMarkdown 
                   components={{
-                    p: ({node, ...props}) => <p className="text-lg mb-4 text-gray-800" {...props} />,
+                    p: ({node, ...props}) => <p className="text-lg mb-4 text-gray-800 text-left" {...props} />,
                     h1: ({node, ...props}) => null, // Hide h1 as we've already rendered it
                     h2: ({node, ...props}) => null, // Hide h2 as we've already rendered it
-                    h3: ({node, ...props}) => <h3 className="text-2xl font-semibold mb-3 text-gray-800" {...props} />,
-                    ul: ({node, ...props}) => <ul className="space-y-4 mb-6 text-lg text-gray-800" {...props} />,
-                    ol: ({node, ...props}) => <ol className="space-y-4 mb-6 text-lg text-gray-800" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="text-2xl font-semibold mb-3 text-gray-800 text-left" {...props} />,
+                    ul: ({node, ...props}) => <ul className="space-y-4 mb-6 text-lg text-gray-800 text-left" {...props} />,
+                    ol: ({node, ...props}) => <ol className="space-y-4 mb-6 text-lg text-gray-800 text-left" {...props} />,
                     li: ({node, ...props}) => (
                       <li className="flex items-start text-gray-800">
                         <div className="mr-3 mt-1.5 h-4 w-4 rounded-full bg-blue-500 flex-shrink-0"></div>
@@ -142,12 +175,12 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
     return (
       <ReactMarkdown 
         components={{
-          p: ({node, ...props}) => <p className="text-lg mb-4 text-gray-800" {...props} />,
-          h1: ({node, ...props}) => <h1 className="text-4xl font-bold mb-6 text-blue-600" {...props} />,
-          h2: ({node, ...props}) => <h2 className="text-3xl font-bold mb-4 text-purple-600" {...props} />,
-          h3: ({node, ...props}) => <h3 className="text-2xl font-semibold mb-3 text-gray-800" {...props} />,
-          ul: ({node, ...props}) => <ul className="space-y-4 mb-6 text-lg text-gray-800 mx-auto max-w-md" {...props} />,
-          ol: ({node, ...props}) => <ol className="space-y-4 mb-6 text-lg text-gray-800 mx-auto max-w-md" {...props} />,
+          p: ({node, ...props}) => <p className="text-lg mb-4 text-gray-800 text-left" {...props} />,
+          h1: ({node, ...props}) => <h1 className="text-4xl font-bold mb-6 text-blue-600 text-center" {...props} />,
+          h2: ({node, ...props}) => <h2 className="text-3xl font-bold mb-4 text-purple-600 text-center" {...props} />,
+          h3: ({node, ...props}) => <h3 className="text-2xl font-semibold mb-3 text-gray-800 text-left" {...props} />,
+          ul: ({node, ...props}) => <ul className="space-y-4 mb-6 text-lg text-gray-800 mx-auto max-w-md text-left" {...props} />,
+          ol: ({node, ...props}) => <ol className="space-y-4 mb-6 text-lg text-gray-800 mx-auto max-w-md text-left" {...props} />,
           li: ({node, ...props}) => (
             <li className="flex items-start text-gray-800">
               <div className="mr-3 mt-1.5 h-4 w-4 rounded-full bg-blue-500 flex-shrink-0"></div>
@@ -211,7 +244,7 @@ export default function SlidePresentation({ markdownContent }: SlideProps) {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-100 to-purple-100 p-8">
       <div className="relative w-full max-w-4xl bg-white rounded-xl shadow-2xl p-12 min-h-[60vh] flex flex-col justify-center">
         <div className="text-center">
-          {processSlideContent(slides[currentSlide])}
+          {processSlideContent(slides[currentSlide], currentSlide)}
         </div>
         
         <div className="absolute bottom-6 right-6 flex gap-4">
